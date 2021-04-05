@@ -506,7 +506,7 @@ a {
 }
 .footer .icons img {
   width: 20px;
-  height: auto;
+  height: 100%;
 }
 @media screen and (max-width: 767px) {
   .footer .content {
