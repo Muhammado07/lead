@@ -129,7 +129,7 @@ a {
 .hero .content h1 {
   font-size: 42px;
   color: var(--third-color);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.4;
 }
 .hero .content p {
@@ -167,8 +167,9 @@ a {
   .hero .content h1 {
     font-size: 24px;
   }
-  .hero .content ul li {
-    font-size: 18px;
+  .hero .content ul li,
+  .hero .content p {
+    font-size: 16px;
   }
   .hero .details {
     padding-top: 80px;
