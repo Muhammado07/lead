@@ -175,7 +175,9 @@ a {
   }
 }
 @media screen and (max-width: 380px) {
-  .hero {
+  .hero,
+  .hero.eng,
+  .hero.res {
     height: 100vh;
   }
   .hero .container {
