@@ -63,8 +63,7 @@ a {
 }
 
 .navbar {
-  background: transparent;
-  position: fixed;
+  background: var(--third-color);
   width: 100%;
   z-index: 99999;
   top: 0;
@@ -72,7 +71,7 @@ a {
   padding: 10px 0;
 }
 .navbar a {
-  color: var(--third-color);
+  color: var(--second-color);
   font-size: 18px;
 }
 .nav {
@@ -97,7 +96,7 @@ a {
   background: url("img/asys-employee1.jpg") center center no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 87.8vh;
+  height: 79vh;
   position: relative;
   z-index: 1;
 }
@@ -105,14 +104,14 @@ a {
   background: url("img/comme.webp") center center no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 87.8vh;
+  height: 79vh;
   position: relative;
 }
 .hero.eng {
   background: url("img/engineering.webp") center center no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 87.8vh;
+  height: 79vh;
   position: relative;
 }
 .hero::after {
@@ -160,41 +159,92 @@ a {
   align-items: center;
   padding-top: 100px;
 }
-@media screen and (max-width: 767px) {
-  .hero .details {
-    grid-template-columns: 1fr;
-  }
-  .hero .content h1 {
-    font-size: 24px;
-  }
-  .hero .content ul li,
-  .hero .content p {
-    font-size: 16px;
-  }
-  .hero .details {
-    padding-top: 80px;
-  }
+.hero-mob {
+  display: none;
 }
-@media screen and (max-width: 380px) {
-  .hero,
-  .hero.eng,
-  .hero.res {
-    height: 100vh;
+@media screen and (max-width: 767px) {
+  .hero {
+    display: none;
   }
-  .hero .container {
-    padding: 0;
+  .hero-mob {
+    display: block;
   }
-  .hero .content {
+  .hero-mob .mob-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-mob .mob-content .img {
+    background: url("img/asys-employee1.jpg") center center no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 180px;
+    z-index: 1;
+  }
+  .hero-mob.res .mob-content .img {
+    background: url("img/comme.webp") center center no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 180px;
+    z-index: 1;
+  }
+  .hero-mob.eng .mob-content .img {
+    background: url("img/engineering.webp") center center no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 180px;
+    z-index: 1;
+  }
+  .hero-mob .mob-content .img::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: -1;
+  }
+  .hero-mob .mob-content .img .content {
+    margin-top: 60px;
     padding-left: 24px;
     padding-right: 24px;
   }
-  .hero .content h1 {
+  .hero-mob .mob-content .img .content h1 {
     font-size: 18px;
+    color: var(--third-color);
+    font-weight: 600;
+    line-height: 1.4;
   }
-  .hero .content ul li {
-    font-size: 14px;
+  .hero-mob .mob-content .img .content ul {
+    margin-top: 10px;
+    list-style: circle;
+    margin-left: 20px;
+  }
+  .hero-mob.ar .mob-content .img .content ul {
+    margin-top: 10px;
+    list-style: circle;
+    margin-right: 20px;
+  }
+  .hero-mob .mob-content .img .content ul li {
+    font-size: 16px;
+    color: var(--third-color);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .hero-mob .mob-content .img .content p {
+    font-size: 16px;
+    color: var(--third-color);
+    line-height: 1.4;
+    margin-bottom: 10px;
   }
 }
+
 /* Formbox */
 
 .formbox {
@@ -203,7 +253,7 @@ a {
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.9);
+  background: #f4f6f3;
   width: 65%;
   padding: 20px;
 }
@@ -231,6 +281,7 @@ a {
 }
 .ar .combine .input-box:first-child {
   margin-left: 20px;
+  margin-right: 0;
 }
 .formbox form .input-box input,
 .formbox form .input-box textarea {
@@ -448,8 +499,7 @@ a {
 @media screen and (max-width: 767px) {
   .formbox {
     width: 100%;
-    margin-top: 20px;
-    padding: 20px 10px;
+    padding: 20px;
   }
   .contact.con-serv .formbox {
     margin-top: 0;
