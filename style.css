@@ -93,7 +93,7 @@ a {
   }
 }
 .hero {
-  background: url("img/asys-employee1.jpg") center center no-repeat;
+  background: url("img/asys-employee.jpg") center center no-repeat;
   background-size: cover;
   width: 100vw;
   height: 79vh;
@@ -101,14 +101,14 @@ a {
   z-index: 1;
 }
 .hero.res {
-  background: url("img/comme.webp") center center no-repeat;
+  background: url("img/comme.jpg") center center no-repeat;
   background-size: cover;
   width: 100vw;
   height: 79vh;
   position: relative;
 }
 .hero.eng {
-  background: url("img/engineering.webp") center center no-repeat;
+  background: url("img/engineering.jpg") center center no-repeat;
   background-size: cover;
   width: 100vw;
   height: 79vh;
@@ -142,15 +142,6 @@ a {
   margin-top: 20px;
   list-style: circle;
   margin-left: 20px;
-}
-.hero.ar .content ul {
-  margin-right: 20px;
-}
-.hero .content ul li {
-  font-size: 18px;
-  color: var(--third-color);
-  margin-bottom: 10px;
-  font-weight: 400;
 }
 .hero .details {
   display: grid;
