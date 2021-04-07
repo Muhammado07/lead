@@ -566,6 +566,23 @@ a {
 }
 .cta-support {
   text-align: center;
+  margin-bottom: 10px;
+}
+.cta-support p.sub-first {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #151515;
+}
+.cta-support p.sub-second {
+  font-weight: 300;
+  color: #151515;
+  line-height: 1.4;
+}
+.cta-support p.sub-second a {
+  color: #00539e;
+  font-weight: bold;
+  text-decoration: underline;
 }
 .ar {
   direction: rtl;
