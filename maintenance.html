@@ -8,6 +8,7 @@
     <meta name="description" content="Maintenance" />
     <link rel="shortcut icon" href="https://york.com.sa/favicon.ico" />
     <title>Maintenance</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <div class="navbar">
@@ -50,14 +51,9 @@
               <input type="text" required="" />
               <span>Email*</span>
             </div>
-            <!-- ------------- -->
-            <!-- TO BE REMOVED -->
-            <!-- ------------- -->
-            {{GOOGLE CAPTCHA GOES HERE}}
-            <!-- ------------- -->
-            <!-- TO BE REMOVED -->
-            <!-- ------------- -->
             <div class="input-box">
+              <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+              <br />
               <input type="submit" value="Get A Quote!" />
             </div>
             <div class="cta-support">
