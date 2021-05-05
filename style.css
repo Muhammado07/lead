@@ -514,7 +514,16 @@ a {
   width: 20px;
   height: 100%;
 }
+.footer.moby {
+  display: none;
+}
 @media screen and (max-width: 767px) {
+  .footer {
+    display: none;
+  }
+  .footer.moby {
+    display: block;
+  }
   .footer .content {
     flex-direction: column;
   }
@@ -524,5 +533,10 @@ a {
   .footer .con p {
     font-size: 11px;
     text-align: center;
+  }
+}
+@media screen and (max-width: 360px) {
+  .footer.moby {
+    margin-top: 60px !important;
   }
 }
