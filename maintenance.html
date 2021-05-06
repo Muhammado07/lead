@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <meta name="description" content="Maintenance" />
     <link rel="shortcut icon" href="https://york.com.sa/favicon.ico" />
-    <script src="https://hcaptcha.com/1/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <title>Maintenance</title>
   </head>
   <body>
@@ -54,8 +54,8 @@
             </div>
             <div class="input-box">
               <div
-                class="h-captcha"
-                data-sitekey="3f7f821f-05b7-486b-a3d9-21395609a73e"
+                class="g-recaptcha"
+                data-sitekey="6LeGU8QaAAAAAP8LZB9nzf1udUDPLC__gWGMbEl0"
               ></div>
               <input type="submit" value="Get A Quote!" />
             </div>
@@ -132,5 +132,20 @@
         </div>
       </div>
     </div>
+    <script>
+      add_filter(
+        "clean_url",
+        function ($url) {
+          if (FALSE === strpos($url, "www.google.com/recaptcha/api.js")) {
+            // not our file
+            return $url;
+          }
+          // Must be a ', not "!
+          return "$url' defer='defer";
+        },
+        11,
+        1
+      );
+    </script>
   </body>
 </html>
