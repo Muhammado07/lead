@@ -133,19 +133,16 @@
       </div>
     </div>
     <script>
-      add_filter(
-        "clean_url",
-        function ($url) {
-          if (FALSE === strpos($url, "www.google.com/recaptcha/api.js")) {
-            // not our file
-            return $url;
-          }
-          // Must be a ', not "!
-          return "$url' defer='defer";
-        },
-        11,
-        1
-      );
+            function add_asyncdefer_attribute($tag, $handle)
+      {
+          $param = '';
+          if ( strpos($handle, 'async') !== false ) $param = 'async ';
+          if ( strpos($handle, 'defer') !== false ) $param .= 'defer ';
+          if ( $param )
+              return str_replace('<script ', '<script ' . $param, $tag);
+          else
+              return $tag;
+      }
     </script>
   </body>
 </html>
