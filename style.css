@@ -204,6 +204,12 @@ a {
   width: 65%;
   margin: 0 auto;
 }
+.formbox form .head-form {
+  text-align: center;
+  margin: 5px auto 20px;
+  color: var(--second-color);
+  font-weight: 600;
+}
 .series.con-us .formbox form {
   position: relative;
   width: 100%;
