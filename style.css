@@ -108,7 +108,7 @@ a {
   z-index: 1;
 }
 .hero .details .image.res {
-  background: url("img/comme.jpg") center center no-repeat;
+  background: url("img/res.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
   width: 100%;
@@ -116,7 +116,7 @@ a {
   z-index: 1;
 }
 .hero .details .image.eng {
-  background: url("img/engineering.jpg") center center no-repeat;
+  background: url("img/comme.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
   width: 100%;
