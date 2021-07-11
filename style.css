@@ -1,5 +1,7 @@
 /* Design By: Mohamed Ali === Al Salem Johnson Controls */
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
 :root {
   --first-color: #00539e;
   --second-color: #151515;
@@ -19,7 +21,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -91,7 +93,7 @@ a {
     width: 180px;
   }
 }
-.hero .details {
+.heros .details {
   height: 100%;
   position: relative;
   display: grid;
@@ -99,7 +101,7 @@ a {
   justify-content: center;
   align-items: center;
 }
-.hero .details .image {
+.heros .details .image {
   background: url("img/asys-employee.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
@@ -107,25 +109,25 @@ a {
   height: 100vh;
   z-index: 1;
 }
-.hero .details .image.res {
-  background: url("img/res.jpg") center center no-repeat;
+.heros .details .image.res {
+  background: url("img/lead-chiller.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
   width: 100%;
   height: 100vh;
   z-index: 1;
 }
-.hero .details .image.eng {
-  background: url("img/comme.jpg") center center no-repeat;
+.heros .details .image.eng {
+  background: url("img/refr.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
   width: 100%;
   height: 100vh;
   z-index: 1;
 }
-.hero .details .image::after,
-.hero .details .image.res::after,
-.hero .details .image.eng::after {
+.heros .details .image::after,
+.heros .details .image.res::after,
+.heros .details .image.eng::after {
   content: "";
   position: absolute;
   display: block;
@@ -137,53 +139,72 @@ a {
   z-index: -1;
 }
 @media screen and (max-width: 1199px) {
-  .hero .details {
+  .heros .details {
     grid-template-columns: 1fr;
   }
-  .hero .details .image,
-  .hero .details .image.res,
-  .hero .details .image.eng {
+  .heros .details .image,
+  .heros .details .image.res,
+  .heros .details .image.eng {
     height: 250px;
   }
 }
-.hero .details .content {
+.heros .details .content {
   position: absolute;
   left: 36%;
   top: 40%;
   transform: translate(-50%, -36%);
   color: #fff;
 }
-.hero .details .content.ar {
+.heros .details .content.ar {
   right: 0%;
   transform: translate(-10%, -36%);
   text-align: right;
 }
-.hero .details .content h1 {
-  font-size: 36px;
+.heros .details .content h1 {
+  font-size: 38px;
   color: var(--third-color);
   font-weight: 600;
   line-height: 1.4;
 }
-.hero .details .content p {
+.heros .details .content p {
   font-size: 18px;
   color: var(--third-color);
   font-weight: 500;
   line-height: 1.4;
   padding-top: 10px;
 }
+.heros .details .res .content p span {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+}
 @media screen and (max-width: 1199px) {
-  .hero .details .content {
+  .heros .details .content {
     left: 15%;
     top: 45%;
     transform: translate(-10%, -5%);
   }
-  .hero .details .content h1 {
+  .heros .details .content h1 {
     font-size: 26px;
   }
 }
+@media screen and (max-width: 767px) {
+  .heros .details .content h1 {
+    font-size: 24px;
+  }
+  .heros .details .res .content p span {
+    font-size: 18px;
+  }
+  .heros .details .content p {
+    font-size: 18px;
+  }
+}
 @media screen and (max-width: 380px) {
-  .hero .details .content h1 {
-    font-size: 22px;
+  .heros .details .content h1 {
+    font-size: 18px;
+  }
+  .heros .details .content p {
+    font-size: 16px;
   }
 }
 
@@ -546,3 +567,16 @@ a {
     margin-top: 60px !important;
   }
 }
+
+.formbox h3 {
+  font-weight: 500;
+  margin-bottom: 30px;
+  font-size: 22px;
+  text-align: center;
+}
+
+/* @media screen and (max-width: 767px) {
+  .heros .details .res .content p span {
+    font-size: 18px;
+  }
+} */
